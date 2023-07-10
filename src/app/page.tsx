@@ -2,7 +2,6 @@ import PhilosophyCard from '../_components/client/PhilosophyCard'
 import TransformingTitle from '../_components/client/TransformingTitle'
 import AnimatedLine from '../_components/client/AnimatedLine'
 import TransformingFeatures from '@/_components/client/TransformingFeatures'
-import Carousel from '@/_components/client/Carousel'
 import StackDisplay from '@/_components/client/StackDisplay'
 import ReviewCard from '@/_components/ReviewCard'
 
