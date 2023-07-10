@@ -1,0 +1,27 @@
+@keyframes initial-left {
+    from {
+      transform: translateX(50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+}
+
+@keyframes list-grow {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    10% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    12% {
+      transform: scale(0.9);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.8;
+    }
+}

@@ -1,112 +1,54 @@
-import Image from 'next/image'
+import PhilosophyCard from '../_components/client/PhilosophyCard'
+import TransformingTitle from '../_components/client/TransformingTitle'
+import AnimatedLine from '../_components/client/AnimatedLine'
+import TransformingFeatures from '@/_components/client/TransformingFeatures'
+import Carousel from '@/_components/client/Carousel'
+import StackDisplay from '@/_components/client/StackDisplay'
+import ReviewCard from '@/_components/ReviewCard'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen flex-col items-center justify-between w-screen overflow-x-hidden snap-y overflow-y-scroll">
+      <div className='w-screen flex flex-col justify-center items-center gap-16 md:gap-8 relative snap-start' style={{ height: 'calc(100vh - 3.5rem)' }}>
+        <span className='sm:flex-row text-4xl md:text-6xl font-bold whitespace-nowrap tracking-wide shadow [text-shadow:_0_1px_10px_rgb(255_255_255_/_40%)]'>
+          Max Integrations
+        </span>
+        <TransformingTitle />
+        <div className='h-0 md:h-8 lg:h-16'></div>
+        <AnimatedLine />
+        <PhilosophyCard />
+      </div>
+      <div className='w-screen flex flex-col justify-center items-center gap-16 md:gap-8 relative h-screen px-4 md:px-8 lg:px-16 xl:px-24 snap-start' style={{ perspective: 2000 }}>
+        <span className='text-3xl font-semibold'>
+          Our Stack
+        </span>
+        <div className='bg-gradient-to-r from-orange-400 to-fuchsia-600 bg-clip-text h-fit'>
+          <TransformingFeatures />
         </div>
+        <StackDisplay />
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className='w-screen flex flex-col justify-start lg:justify-center mt-24 lg:mt-0 items-center gap-4 md:gap-8 lg:gap-16 relative h-screen p-8 md:p-24 snap-start'>
+        <span className='text-3xl font-semibold'>
+          Reviews
+        </span>
+        <span className='text-2xl md:text-4xl font-bold text-center md:text-start'>
+          Don&apos;t take our word for it
+        </span>
+        <span className='text-xl font-normal text-white/70 text-center md:text-start'>
+          Let our clients tell you how we&apos;ve helped them
+        </span>
+        <div className='w-full flex justify-center items-center gap-8 mt-12 flex-col xl:flex-row'>
+          <ReviewCard
+            name='John Chamberlain'
+            quote='Robust, elegant solutions. We worked to make an analytics app that exceeded my expectations. I would recommend them to anyone.'
+            location='Denver, CO'
+          />
+          <ReviewCard
+            name='Logan Todd'
+            quote='Max Integrations had my custom website to me really fast, even with all the custom booking and payment features I needed. High quality work.'
+            location='Port Orange, FL'
+          />
+        </div>
       </div>
     </main>
   )
